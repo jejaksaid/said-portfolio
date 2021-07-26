@@ -12,7 +12,7 @@ def projects(request):
 def project(request, pk):
     projectObj = Project.objects.get(id=pk)
     tags = projectObj.tags.all()
-    print('projectObj:', projectObj)
+    # print('projectObj:', projectObj)
     return render(request, 'projects/single-project.html', {'project': projectObj, 'tags': tags})
 
 def createProject(request):

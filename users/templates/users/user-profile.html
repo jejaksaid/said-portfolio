@@ -21,12 +21,6 @@
                 </li>
                   {% endif %}
 
-
-<!--                <li>-->
-<!--                  <a title="Stackoverflow" href="#" target="_blank"><i class="im im-stackoverflow"></i></a>-->
-<!--                </li>-->
-
-
                   {% if profile.social_twitter %}
                 <li>
                   <a title="Twitter" href="{{profile.social_twitter}}" target="_blank"><i class="im im-twitter"></i></a>
@@ -85,6 +79,7 @@
           <div class="devInfo">
             <h3 class="devInfo__title">Projects</h3>
             <div class="grid grid--two">
+
               {% for project in profile.project_set.all %}
               <div class="column">
                 <div class="card project">
@@ -103,7 +98,8 @@
                         <span class="tag tag--pill tag--main">
                           <small>{{tag}}</small>
                         </span>
-                          {% endfor %}
+                        {% endfor %}
+
                       </div>
                     </div>
                   </a>
