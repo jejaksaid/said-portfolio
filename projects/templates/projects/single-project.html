@@ -20,12 +20,12 @@
           </div>
 
             {% if project.source_link %}
-          <a class="singleProject__liveLink" href="#" target="_blank"><i class="im im-external-link"></i>Source Code
+          <a class="singleProject__liveLink" href="{{project.source_link}}" target="_blank"><i class="im im-external-link"></i>Source Code
           </a>
             {% endif %}
 
                   {% if project.demo_link %}
-          <a class="singleProject__liveLink" href="#" target="_blank"><i class="im im-external-link"></i>Live Demo
+          <a class="singleProject__liveLink" href="{{project.source_link}}" target="_blank"><i class="im im-external-link"></i>Live Demo
           </a>
             {% endif %}
 
@@ -36,16 +36,7 @@
           <h2 class="singleProject__title">{{project.title}}</h2>
           <h3 class="singleProject__subtitle">About the Project</h3>
           <div class="singleProject__info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima harum maxime debitis amet voluptates esse
-            a perferendis tempora, natus pariatur obcaecati odit quisquam fugit deserunt.
-
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptates earum possimus a perferendis culpa
-            omnis, libero quae soluta, obcaecati amet. Quam earum ad qui reprehenderit eligendi porro ab possimus
-            fugit voluptatem rerum eius sapiente, nemo mollitia aperiam suscipit culpa corrupti officiis dicta soluta
-            ut similique! Iste soluta quae tempora alias assumenda? Nam nesciunt nihil enim tempore cum quo
-            architecto?
+            {{project.description}}
           </div>
 
           <div class="comments">
@@ -72,7 +63,6 @@
                 <div class="comment__details">
                   <a href="profile.html" class="comment__author">Sulamita Ivanov</a>
                   <p class="comment__info">
-                    {{project.description}}
                   </p>
                 </div>
               </div>
