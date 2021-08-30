@@ -19,4 +19,20 @@
             {% endif %}
       </ul>
     </div>
-    {% endif %}
+{% endif %}
+
+<script type="text/javascript">
+<!--   GET SEARCH FORM AND PAGE LINKS-->
+    let searchForm = document.getElementById('searchForm')
+    let pageLinks = document.getElementByClassName('page-link')
+
+<!--     ENSURE SEARCH FORM EXISTS-->
+    if(searchForm){
+        for(let i=0; pageLinks.length > i; i++ ){
+            pageLinks[i].addEventListener('click', (e)=> {
+                e.preventDefault()
+                console.log('Button click')
+            })
+        }
+    }
+</script>
